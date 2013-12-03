@@ -400,30 +400,11 @@
               (local-file (file-relative-name
                            temp-file
                            (file-name-directory buffer-file-name))))
-             (list "pyflakes" (list local-file))))
-
-;         (setq flymake-allowed-file-name-masks '("\\.py\\'" flymake-pyflakes-init)))
-         (add-to-list 'flymake-allowed-file-name-masks
-                      '("\\.py\\'" flymake-pyflakes-init)))
+             )))
 
 (add-hook 'find-file-hook 'flymake-find-file-hook)
 
 ;;(load "flymake-php.el")
-
-(defun flymake-jslint-init ()
-  (let* ((temp-file (flymake-init-create-temp-buffer-copy
-		     'flymake-create-temp-inplace))
-         (local-file (file-relative-name
-		      temp-file
-		      (file-name-directory buffer-file-name))))
-    (list "jshint" (list local-file))))
-
-(setq flymake-allowed-file-name-masks
-      (cons '(".+\\.js$"
-	      flymake-jslint-init
-	      flymake-simple-cleanup
-	      flymake-get-real-file-name)
-	    flymake-allowed-file-name-masks))
 
 (setq flymake-err-line-patterns
       (cons '("^\\(.+\\). \(line: \\([[:digit:]]+\\), character: \\([[:digit:]]+\\)\)$"
@@ -431,9 +412,6 @@
 	    flymake-err-line-patterns))
 
 ;(require 'gjslint)
-
-(add-hook 'javascript-mode-hook
-	  (lambda () (flymake-mode 1)))
 
 ; Use 2 spaces for indents in javascript-mode
 (setq js-indent-level 2)
@@ -509,7 +487,7 @@
 (set-face-foreground 'lineker-warning-face "Black")
 
 ;; Use flymake
-(add-hook 'c-mode-hook 'flymake-mode)
+;;(add-hook 'c-mode-hook 'flymake-mode)
 
 ;; Utf-8
 (setq buffer-file-coding-system 'utf-8)

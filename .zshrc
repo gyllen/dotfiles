@@ -40,6 +40,10 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+export PYTHONPATH=/Users/gyllen/own/opencv-2.4.6.1/build/lib
+
 plugins=(git osx ruby rails3 bundler)
 
 source $ZSH/oh-my-zsh.sh

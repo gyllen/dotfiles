@@ -44,7 +44,7 @@ export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 export PYTHONPATH=/Users/gyllen/own/opencv-2.4.6.1/build/lib
 
-plugins=(git osx ruby rails3 bundler)
+plugins=(git osx ruby rails bundler)
 
 source $ZSH/oh-my-zsh.sh
 

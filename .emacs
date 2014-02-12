@@ -426,6 +426,9 @@
   (if (featurep 'xemacs) "/[sudo/root@localhost]" "/sudo:root@localhost:")
   "*The filename prefix used to open a file with `find-file-root'.")
 
+;;; --- Less
+(require 'less-css-mode)
+
 ;;; --- Ruby
 (require 'ruby-mode)
 ;; Invoke ruby with '-c' to get syntax checking

@@ -44,11 +44,14 @@ export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 export PYTHONPATH=/Users/gyllen/own/opencv-2.4.6.1/build/lib
 
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig
+
 plugins=(git osx ruby rails bundler)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export BOXEN_CHEF_USER=gyllen
 
 source /opt/boxen/env.sh

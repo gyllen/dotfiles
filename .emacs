@@ -426,8 +426,18 @@
   (if (featurep 'xemacs) "/[sudo/root@localhost]" "/sudo:root@localhost:")
   "*The filename prefix used to open a file with `find-file-root'.")
 
+;;; --- Jade
+(require 'sws-mode)
+(require 'jade-mode)
+(add-to-list 'auto-mode-alist '("\\.styl$" . sws-mode))
+(add-to-list 'auto-mode-alist '("\\.jade$" . jade-mode))
+
 ;;; --- Less
 (require 'less-css-mode)
+
+;;; -- Adoc
+(require 'markup-faces)
+(require 'adoc-mode)
 
 ;;; --- Ruby
 (require 'ruby-mode)

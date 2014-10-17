@@ -439,6 +439,16 @@
 (require 'markup-faces)
 (require 'adoc-mode)
 
+;;; -- Lua
+(require 'lua-mode)
+(autoload 'lua-mode "lua-mode" "Lua editing mode." t)
+(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
+
+;;; --- Yaml
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+
 ;;; --- Ruby
 (require 'ruby-mode)
 ;; Invoke ruby with '-c' to get syntax checking

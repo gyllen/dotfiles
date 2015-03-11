@@ -274,6 +274,14 @@
 (require 'multiple-cursors)
 (add-hook 'prog-mode-hook #'auto-complete-mode)
 
+(ac-config-default)
+(add-hook 'objc-mode-common-hook 'ac-cc-mode-setup)
+
+(define-key ac-completing-map "\M-n" 'ac-next)
+(define-key ac-completing-map "\M-p" 'ac-previous)
+(define-key ac-completing-map [down] [down])
+(define-key ac-completing-map [up] [up])
+
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
 
@@ -285,7 +293,7 @@
 
 (require 'sublimity)
 (require 'sublimity-scroll)
-(require 'sublimity-map)
+;;(require 'sublimity-map)
 ;;(require 'sublimity-attractive)
 (sublimity-mode 1)
 
@@ -300,7 +308,7 @@
 
 (require 'powerline)
 (powerline-default-theme)
-
+;;(add-hook 'prog-mode-hook #'linum-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Language Specifics
@@ -320,12 +328,11 @@
  '(coffee-tab-width 2)
  '(git-gutter:added-sign "☀")
  '(git-gutter:deleted-sign "☂")
- '(git-gutter:hide-gutter t)
  '(git-gutter:modified-sign "☁")
  '(git-gutter:window-width 2)
  '(package-selected-packages
    (quote
-    (projectile powerline json-mode undo-tree web magit git-gutter imgix rainbow-mode rspec-mode enh-ruby-mode indent-guide helm-dash sublimity helm highlight-symbol drag-stuff expand-region auto-complete flycheck multiple-cursors highlight-parentheses smartparens anaconda-mode rainbow-delimiters haml-mode flymake-haml exec-path-from-shell flymake-ruby flymake-coffee ruby-test-mode js2-mode color-theme coffee-mode))))
+    (yaml-mode sass-mode projectile powerline json-mode undo-tree web magit git-gutter imgix rainbow-mode rspec-mode enh-ruby-mode indent-guide helm-dash sublimity helm highlight-symbol drag-stuff expand-region auto-complete flycheck multiple-cursors highlight-parentheses smartparens anaconda-mode rainbow-delimiters haml-mode flymake-haml exec-path-from-shell flymake-ruby flymake-coffee ruby-test-mode js2-mode color-theme coffee-mode))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Git

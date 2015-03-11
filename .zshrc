@@ -46,7 +46,7 @@ export PYTHONPATH=/Users/gyllen/own/opencv-2.4.8/build/lib
 
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig
 
-plugins=(git osx ruby rails bundler)
+plugins=(git osx ruby rails bundler bower brew common-aliases encode64 github knife npm osx pip)
 
 source $ZSH/oh-my-zsh.sh
 
